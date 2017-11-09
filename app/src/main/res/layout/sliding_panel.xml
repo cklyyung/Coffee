@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryLight">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:layout_height="52dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="Gold Tier"/>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="275dp">
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:layout_centerInParent="true"
+                android:id="@+id/tier_progress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:arc_stroke_width="12dp"
+                app:arc_finished_color="@color/silver"
+                app:arc_unfinished_color="@color/gold"
+                app:arc_text_color="@color/white"
+                app:arc_bottom_text="1000"
+                app:arc_bottom_text_size="14sp"/>
+            <TextView
+                android:id="@+id/arc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tier_progress"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:text="You've reached GOLD tier!"/>
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_margin="10dp"
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+</LinearLayout>
