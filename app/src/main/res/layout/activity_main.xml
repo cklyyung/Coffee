@@ -53,7 +53,7 @@
         android:background="@drawable/coffee_beans">
         <TextView
             android:id="@+id/textview_points"
-            android:text="450"
+            android:text="1000"
             android:textColor="@color/white"
             android:textSize="48sp"
             android:layout_width="wrap_content"

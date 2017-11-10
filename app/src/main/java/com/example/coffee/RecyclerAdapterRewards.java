@@ -39,7 +39,7 @@ public class RecyclerAdapterRewards extends RecyclerView.Adapter<RecyclerAdapter
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.cardview, parent, false);
 
-
+        view.setOnClickListener(MainActivity.myOnClickListener);
         MyViewHolder myViewHolder = new MyViewHolder(view);
         return myViewHolder;
     }

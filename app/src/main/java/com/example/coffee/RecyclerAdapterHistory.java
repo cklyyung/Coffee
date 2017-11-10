@@ -41,7 +41,7 @@ public class RecyclerAdapterHistory extends RecyclerView.Adapter<RecyclerAdapter
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.cardview2, parent, false);
 
-
+        view.setOnClickListener(MainActivity.myOnClickListener);
         MyViewHolder myViewHolder = new MyViewHolder(view);
         return myViewHolder;
     }

@@ -1,13 +1,53 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/edit_name"
-    android:layout_width="225dp"
-    android:layout_height="225dp"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
     android:layout_gravity="center"
-    android:background="@color/colorPrimary"
-    android:gravity="center"  >
+    android:background="@color/colorPrimary" >
 
     <ImageView
+        android:id="@+id/barcode"
+        android:layout_centerInParent="true"
         android:layout_width="175dp"
+        android:contentDescription="@string/app_name"
         android:layout_height="175dp"
         android:src="@drawable/qr_coffee"/>
+
+    <LinearLayout
+        android:id="@+id/cup"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_height="400dp">
+
+        <TextView
+            android:text="Enjoy your order!"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:background="@drawable/oval"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="240dp"
+            android:layout_height="300dp">
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coffee" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
 </RelativeLayout>
