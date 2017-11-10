@@ -22,6 +22,8 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position == 0) {
             return new PagerFragment();
+        } else if (position == 1) {
+            return new PagerFragment1();
         } else {
             return new PagerFragment2();
         }
@@ -30,7 +32,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
     // This determines the number of tabs
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 
     // This determines the title for each tab
@@ -41,6 +43,8 @@ public class PagerAdapter extends FragmentPagerAdapter {
             case 0:
                 return "Rewards";
             case 1:
+                return "Offers";
+            case 2:
                 return "History";
             default:
                 return null;

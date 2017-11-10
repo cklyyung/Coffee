@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class PagerFragment extends Fragment {
+public class PagerFragment1 extends Fragment {
 
-    public PagerFragment() {
+    public PagerFragment1() {
         // Required empty public constructor
     }
 
@@ -33,9 +33,10 @@ public class PagerFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         ArrayList<RewardModel> data = new ArrayList<RewardModel>();
-        data.add(new RewardModel("Redeem Any Menu Item", "-200 points"));
-        data.add(new RewardModel("Silver Tier Gift: Free Coffee", "Free"));
-        data.add(new RewardModel("Gold Tier Gift: Free Mug", "Free"));
+        data.add(new RewardModel("Chocolate Cookie", "+200 points"));
+        data.add(new RewardModel("Hot Chocolate Extravaganza", "+300 points"));
+        data.add(new RewardModel("Buttery Scone", "+200 points"));
+        data.add(new RewardModel("Coffee", "+100 points"));
 
         recyclerView.setAdapter(new RecyclerAdapterRewards(data));
         return rootView;
