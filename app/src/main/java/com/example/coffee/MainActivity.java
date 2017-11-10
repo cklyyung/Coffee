@@ -14,12 +14,16 @@ public class MainActivity extends AppCompatActivity {
 
     static View.OnClickListener myOnClickListener;
 
+    static View.OnClickListener myOnClickListener1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         myOnClickListener = new MyOnClickListener(this);
+        myOnClickListener1 = new MyOnClickListener1(this);
+
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
@@ -45,14 +49,28 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-
             FragmentManager fm = getSupportFragmentManager();
             QRDialog editNameDialogFragment = QRDialog.newInstance("Some Title");
             editNameDialogFragment.show(fm, "fragment_edit_name");
 
         }
+    }
 
+    private class MyOnClickListener1 implements View.OnClickListener {
 
+        private final Context context;
+
+        private MyOnClickListener1(Context context) {
+            this.context = context;
+        }
+
+        @Override
+        public void onClick(View v) {
+            FragmentManager fm = getSupportFragmentManager();
+            CookieDialog editNameDialogFragment = CookieDialog.newInstance("Some Title");
+            editNameDialogFragment.show(fm, "fragment_edit_name");
+
+        }
     }
 }
 

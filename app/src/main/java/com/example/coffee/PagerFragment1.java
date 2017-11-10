@@ -38,7 +38,7 @@ public class PagerFragment1 extends Fragment {
         data.add(new RewardModel("Buttery Scone", "+200 points"));
         data.add(new RewardModel("Coffee", "+100 points"));
 
-        recyclerView.setAdapter(new RecyclerAdapterRewards(data));
+        recyclerView.setAdapter(new RecyclerAdapterRewards(data, false));
         return rootView;
     }
 

@@ -16,9 +16,11 @@ import java.util.ArrayList;
 public class RecyclerAdapterRewards extends RecyclerView.Adapter<RecyclerAdapterRewards.MyViewHolder> {
 
     private ArrayList<RewardModel> dataSet;
+    private boolean setOnClick = false;
 
-    public RecyclerAdapterRewards(ArrayList<RewardModel> data) {
+    public RecyclerAdapterRewards(ArrayList<RewardModel> data, boolean setOnClick) {
         this.dataSet = data;
+        this.setOnClick = setOnClick;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
@@ -39,7 +41,11 @@ public class RecyclerAdapterRewards extends RecyclerView.Adapter<RecyclerAdapter
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.cardview, parent, false);
 
-        view.setOnClickListener(MainActivity.myOnClickListener);
+        if (setOnClick) {
+            view.setOnClickListener(MainActivity.myOnClickListener);
+        } else {
+            view.setOnClickListener(MainActivity.myOnClickListener1);
+        }
         MyViewHolder myViewHolder = new MyViewHolder(view);
         return myViewHolder;
     }

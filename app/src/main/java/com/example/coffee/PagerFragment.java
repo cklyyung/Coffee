@@ -37,7 +37,7 @@ public class PagerFragment extends Fragment {
         data.add(new RewardModel("Silver Tier Gift: Free Coffee", "Free"));
         data.add(new RewardModel("Gold Tier Gift: Free Mug", "Free"));
 
-        recyclerView.setAdapter(new RecyclerAdapterRewards(data));
+        recyclerView.setAdapter(new RecyclerAdapterRewards(data, true));
         return rootView;
     }
 
